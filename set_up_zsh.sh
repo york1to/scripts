@@ -20,10 +20,6 @@ git clone https://github.com/zplug/zplug $ZPLUG_HOME
 # Add zplug to .zshrc
 echo "source $ZPLUG_HOME/init.zsh" >> ~/.zshrc
 
-# Install Pure prompt
-echo "Installing Pure prompt..."
-zplug "sindresorhus/pure", as:theme, use:pure.zsh
-
 # Install zsh-autosuggestions
 echo "Installing zsh-autosuggestions..."
 zplug "zsh-users/zsh-autosuggestions"
@@ -32,9 +28,9 @@ zplug "zsh-users/zsh-autosuggestions"
 echo "Installing zsh-syntax-highlighting..."
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
-# Source zplug and install plugins
-echo "source $ZPLUG_HOME/init.zsh
 zplug install
+
+# Source zplug and install plugins
 zplug load" >> ~/.zshrc
 
 # Reload Zsh configuration
