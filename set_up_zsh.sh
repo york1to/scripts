@@ -38,3 +38,6 @@ echo "Reloading Zsh configuration..."
 zsh -i -c 'source ~/.zshrc'
 
 echo "Installation complete. Please restart your terminal."
+
+# If using VSCode, you should set the default shell in configuration as well
+# Don't use pure cause it keeps requesting github
