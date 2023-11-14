@@ -31,7 +31,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug install
 
 # Source zplug and install plugins
-zplug load" >> ~/.zshrc
+zplug load >> ~/.zshrc
 
 # Reload Zsh configuration
 echo "Reloading Zsh configuration..."
