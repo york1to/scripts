@@ -49,7 +49,40 @@ Install Nvidia Driver
     Yes for everything
   Install Cuda
     same as driver
-  
-    
+    `export PATH=/usr/local/cuda-**/bin:$PATH`
+    `export LD_LIBRARY_PATH=/usr/local/cuda-**/lib64:$LD_LIBRARY_PATH"`
 
 Install Alist
+  Run the script as root
+
+Install Qbittorent
+  `sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable`
+  `sudo apt install qbittorrent`
+  `sudo apt install qbittorrent-nox`
+
+  Enable the web Service
+
+  Enable systemd
+  `sudo useradd -r -m qbittorrent`
+  `sudo usermod -a -G qbittorrent YOURUSERNAME`
+  `sudo nano /etc/systemd/system/qbittorrent.service`
+
+```
+[Unit]
+Description=qBittorrent
+After=network.target
+
+[Service]
+Type=forking
+User=qbittorrent
+Group=qbittorrent
+UMask=002
+ExecStart=/usr/bin/qbittorrent-nox -d --webui-port=8080
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+  start and enable
+  
+  
