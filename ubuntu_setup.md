@@ -46,6 +46,10 @@ Install Nvidia Driver
   Install
     `sudo chmod a+x NVIDIA-Linux-x86_64-535.129.03.run`
     `sudo ./NVIDIA-Linux-x86_64-535.129.03.run -no-x-check -no-nouveau-check -no-opengl-files`
+    Yes for everything
+  Install Cuda
+    same as driver
+  
     
 
 Install Alist
